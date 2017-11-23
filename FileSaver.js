@@ -128,6 +128,8 @@ var saveAs = saveAs || (function(view) {
 				setTimeout(function() {
 					save_link.href = object_url;
 					save_link.download = name;
+					//target blank
+					save_link.target = "_blank";
 					click(save_link);
 					dispatch_all();
 					revoke(object_url);
